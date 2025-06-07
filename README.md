@@ -1,6 +1,6 @@
 ## webhostmost救活脚本
 
-这是一个用于CloudLinux环境中的Node.js应用恢复工具。此脚本可以帮助您快速清理和重建Node.js环境，解决环境损坏或配置错误的问题。
+用于CloudLinux环境中的Node.js应用恢复工具。此脚本可以帮助您快速清理和重建Node.js环境，解决环境损坏或配置错误的问题。
 
 ## 使用方法
 
