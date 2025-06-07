@@ -36,6 +36,17 @@ NPM_COMMAND_PATH="/home/${INPUT_USERNAME}/nodevenv/domains/${INPUT_DOMAIN}/${APP
 NPM_LOG_DIRECTORY="/home/${INPUT_USERNAME}/.npm/_logs"
 SELF_SCRIPT_PATH="/home/${INPUT_USERNAME}/whm.sh"
 
+# 先销毁可能存在的旧环境
+cloudlinux-selector destroy \
+    --json \
+    --interpreter=nodejs \
+    --user="$INPUT_USERNAME" \
+    --app-root="$APP_ROOT_DIRECTORY"
+
+# 删除旧的nodevenv目录
+rm -rf /home/${INPUT_USERNAME}/nodevenv/domains/${INPUT_DOMAIN}
+
+# 创建新环境
 cloudlinux-selector create \
     --json \
     --interpreter=nodejs \
