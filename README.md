@@ -4,21 +4,12 @@
 
 ## 使用方法
 
-### 1. 下载脚本
 
-脚本下载上传到用户路径
-
-
-### 2. 设置执行权限
+###  运行脚本
 
 ```bash
-chmod +x ~/whm.sh
-```
+curl -sSL https://raw.githubusercontent.com/LeoJyenn/whm/main/whm.sh | bash -s -- 用户名 域名
 
-### 3. 运行脚本
-
-```bash
-./whm.sh
 ```
 
 ## 功能说明
