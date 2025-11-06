@@ -4,7 +4,6 @@ set -e
 # 从命令行参数获取输入
 INPUT_USERNAME=$1
 INPUT_DOMAIN=$2
-CONFIRMATION=$3
 
 # 参数检查
 if [ -z "$INPUT_USERNAME" ]; then
@@ -17,20 +16,10 @@ if [ -z "$INPUT_DOMAIN" ]; then
     exit 1
 fi
 
-if [ -z "$CONFIRMATION" ]; then
-    echo "错误：未输入确认参数 (y)。脚本将退出。"
-    exit 1
-fi
-
 echo "将使用以下信息执行脚本："
 echo "用户名: $INPUT_USERNAME"
 echo "域名: $INPUT_DOMAIN"
 echo ""
-
-if [[ "$CONFIRMATION" != "y" && "$CONFIRMATION" != "Y" ]]; then
-    echo "操作已取消。"
-    exit 0
-fi
 
 APP_PUBLIC_HTML_SUBDIR="public_html"
 NODE_SELECTOR_VERSION="22.14.0"
